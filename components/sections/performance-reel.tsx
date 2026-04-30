@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const shows = [
   { image: "/gallery/image1.jpg", title: "" },
@@ -12,6 +13,16 @@ const shows = [
 ];
 
 export default function PerformanceReel() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    const updateIsMobile = () => setIsMobile(mediaQuery.matches);
+    updateIsMobile();
+    mediaQuery.addEventListener("change", updateIsMobile);
+    return () => mediaQuery.removeEventListener("change", updateIsMobile);
+  }, []);
+
   return (
     <section className="relative min-h-screen bg-[#f5efe6] overflow-hidden py-24">
 
@@ -66,7 +77,7 @@ export default function PerformanceReel() {
 
       {/* 🎯 DRAG AREA */}
       <motion.div
-        drag="x"
+        drag={isMobile ? false : "x"}
         dragConstraints={{ left: -1800, right: 0 }}
         dragElastic={0.12}
         dragMomentum={true}
@@ -76,21 +87,18 @@ export default function PerformanceReel() {
           bounceStiffness: 80,
           bounceDamping: 20,
         }}
-        className="relative z-10 flex gap-16 px-20 cursor-grab active:cursor-grabbing touch-pan-y"
+        className="relative z-10 flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-16 px-4 md:px-20 cursor-default md:cursor-grab md:active:cursor-grabbing"
       >
         {shows.map((show, i) => {
-          const offset = i % 2 === 0 ? 30 : -30;
-
           return (
             <motion.div
               key={i}
               whileHover={{ scale: 1.06, y: -12 }}
               transition={{ duration: 0.4 }}
-              className="flex-shrink-0"
-              style={{ transform: `translateY(${offset}px)` }}
+              className="flex-shrink-0 md:even:translate-y-[30px] md:odd:-translate-y-[30px]"
             >
               <div className="
-                relative w-[300px] md:w-[420px] h-[460px]
+                relative w-[72vw] max-w-[280px] md:w-[420px] h-[330px] md:h-[460px]
                 rounded-[36px] overflow-hidden
                 shadow-[0_40px_120px_rgba(0,0,0,0.18)]
                 group
@@ -99,6 +107,7 @@ export default function PerformanceReel() {
                 {/* IMAGE */}
                 <img
                   src={show.image}
+                  alt={`Performance image ${i + 1}`}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
 

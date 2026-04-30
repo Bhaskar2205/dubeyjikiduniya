@@ -27,6 +27,7 @@ const cities = [
     images: ["/gallery/gurgaon1.jpg", "/gallery/gurgaon2.jpg"],
   },
 ];
+type City = (typeof cities)[number];
 
 /* ✨ Animated line between 2 points */
 function Trail({
@@ -57,7 +58,7 @@ function Trail({
 }
 
 export default function IndiaMapSection() {
-  const [selected, setSelected] = useState<any>(null);
+  const [selected, setSelected] = useState<City | null>(null);
 
   return (
     <section className="relative py-24 bg-[#2b2118] text-[#f5efe6] overflow-hidden">
@@ -78,11 +79,12 @@ export default function IndiaMapSection() {
       </div>
 
       {/* 🌍 MAP CONTAINER */}
-      <div className="relative w-full max-w-5xl mx-auto h-[420px]">
+      <div className="relative w-full max-w-5xl mx-auto h-[280px] sm:h-[340px] md:h-[420px]">
 
         {/* 🗺️ INDIA MAP (SVG IMAGE) */}
         <img
           src="/map/india-outline.svg"
+          alt="India map outline"
           className="w-full h-full object-contain opacity-80"
         />
 
@@ -119,12 +121,13 @@ export default function IndiaMapSection() {
           className="fixed inset-0 bg-black/80 backdrop-blur-lg flex items-center justify-center z-50"
           onClick={() => setSelected(null)}
         >
-          <div className="flex gap-6">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 px-4">
             {selected.images.map((img: string, i: number) => (
               <img
                 key={i}
                 src={img}
-                className="w-[300px] h-[200px] object-cover rounded-xl"
+                alt={`${selected.name} event photo ${i + 1}`}
+                className="w-[88vw] max-w-[300px] h-[180px] sm:h-[200px] object-cover rounded-xl"
               />
             ))}
           </div>

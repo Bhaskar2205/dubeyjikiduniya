@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative h-[90vh] flex items-center overflow-hidden">
+    <section className="relative h-[90vh] overflow-hidden">
 
       {/* IMAGE */}
       <motion.img
@@ -12,7 +12,7 @@ export default function Hero() {
         initial={{ scale: 1.06 }}
         animate={{ scale: 1 }}
         transition={{ duration: 8, ease: "easeOut" }}
-        className="absolute inset-0 w-full h-full object-cover 
+        className="absolute inset-0 w-full h-full object-cover object-[72%_center] md:object-[78%_center]
                    brightness-[1.03] contrast-[1.1] saturate-[1.05]"
       />
 
@@ -23,14 +23,14 @@ export default function Hero() {
       <div className="absolute left-0 top-0 w-[500px] h-[500px] bg-[#efe4d6]/30 blur-[120px]" />
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-2xl px-12">
+      <div className="absolute left-0 bottom-8 md:bottom-12 z-10 max-w-2xl px-6 md:px-12">
 
         {/* SIGNATURE */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 0.9, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-[18px] md:text-[24px] font-light tracking-[0.2em] text-black/70 mb-6"
+          className="md:pl-0 text-[18px] md:text-[24px] font-light tracking-[0.2em] text-black/70 mb-1"
         >
           Eshan Dubey
         </motion.p>
@@ -43,7 +43,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.6 }}
-          className="mt-10 px-8 py-3 border border-black/20 
+          className="mt-5 md:mt-10 px-8 py-3 border border-black/20 
                      rounded-full text-sm tracking-wide 
                      hover:bg-black hover:text-white 
                      transition-all duration-300"
