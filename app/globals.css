@@ -58,3 +58,37 @@ nav a::after {
 nav a:hover::after {
   width: 100%;
 }
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 120% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradientMove {
+  animation: gradientMove 4.5s ease-in-out infinite;
+}
+
+@keyframes hindiGlow {
+  0% {
+    background-position: 0% 50%;
+    filter: brightness(1);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: brightness(1.2);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: brightness(1);
+  }
+}
+
+.animate-hindiGlow {
+  animation: hindiGlow 5s ease-in-out infinite;
+}

@@ -3,7 +3,9 @@
 import Hero from "@/components/sections/hero";
 import Navbar from "@/components/layout/navbar";
 import BooksSection from "@/components/sections/books";
-import GlobeSection from "@/components/sections/globe";
+import GlobeSection from "@/components/sections/IndiaMapSection";
+import PerformanceReel from "@/components/sections/performance-reel";
+
 import { motion } from "framer-motion";
 
 /* 🔥 Reusable Fade Wrapper */
@@ -36,7 +38,10 @@ export default function Home() {
       <FadeSection>
   <GlobeSection />
 </FadeSection>
+ <FadeSection> 
+<PerformanceReel />
 
+ </FadeSection>
       {/* STORY / PERFORMANCE */}
       <FadeSection>
         <section className="py-32 flex items-center justify-center bg-[#efe6dc]">
