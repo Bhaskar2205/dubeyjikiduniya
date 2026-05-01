@@ -4,54 +4,55 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative h-[90vh] overflow-hidden">
+    <section className="relative min-h-[100vh] md:h-[85vh] overflow-hidden">
 
-      {/* IMAGE */}
+      {/* DESKTOP IMAGE */}
       <motion.img
         src="/images/hero-bg.png"
-        initial={{ scale: 1.06 }}
+        initial={{ scale: 1.04 }}
         animate={{ scale: 1 }}
         transition={{ duration: 8, ease: "easeOut" }}
-        className="absolute inset-0 w-full h-full object-cover object-[72%_center] md:object-[78%_center]
-                   brightness-[1.03] contrast-[1.1] saturate-[1.05]"
+        className="
+          hidden md:block
+          absolute inset-0 w-full h-full
+
+          object-cover object-center
+
+          brightness-[1.02]
+          contrast-[1.15]
+          saturate-[1.1]
+          sharpen-[1.1]
+
+          will-change-transform
+        "
       />
 
-      {/* SOFT LEFT FADE (PREMIUM BLEND) */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#efe4d6]/80 via-[#efe4d6]/40 to-transparent" />
+      {/* MOBILE IMAGE */}
+      <motion.img
+        src="/images/hero-mobile.png"
+        initial={{ scale: 1.03 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 6, ease: "easeOut" }}
+        className="
+          block md:hidden
+          absolute inset-0 w-full h-full
 
-      {/* SUBTLE LIGHT GLOW (DEPTH) */}
-      <div className="absolute left-0 top-0 w-[500px] h-[500px] bg-[#efe4d6]/30 blur-[120px]" />
+          object-cover object-center
 
-      {/* CONTENT */}
-      <div className="absolute left-0 bottom-8 md:bottom-12 z-10 max-w-2xl px-6 md:px-12">
+          brightness-[1.03]
+          contrast-[1.12]
+          saturate-[1.08]
 
-        {/* SIGNATURE */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 0.9, y: 0 }}
-          transition={{ duration: 1 }}
-          className="md:pl-0 text-[18px] md:text-[24px] font-light tracking-[0.2em] text-black/70 mb-1"
-        >
-          Eshan Dubey
-        </motion.p>
+          will-change-transform
+        "
+      />
 
-        
+      {/* ✨ VERY SUBTLE DEPTH (no white wash) */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
 
-        
-        {/* CTA */}
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.6 }}
-          className="mt-5 md:mt-10 px-8 py-3 border border-black/20 
-                     rounded-full text-sm tracking-wide 
-                     hover:bg-black hover:text-white 
-                     transition-all duration-300"
-        >
-          Explore Performances
-        </motion.button>
+      {/* 🌟 LIGHT GLOW (reduced, not overpowering) */}
+      <div className="absolute left-0 top-0 w-[400px] h-[400px] bg-[#efe4d6]/20 blur-[140px]" />
 
-      </div>
     </section>
   );
 }

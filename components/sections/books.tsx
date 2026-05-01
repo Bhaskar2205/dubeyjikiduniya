@@ -30,10 +30,36 @@ export default function BooksSection() {
           A World of Words
         </h2>
 
-        <p className="mt-6 text-[#2f241b] text-xl md:text-2xl font-semibold leading-relaxed">
-  हर लफ़्ज़ में छुपा है एक एहसास, हर किताब एक दुनिया —
-  इन कहानियों में बसती है ज़िंदगी की सच्चाई।
-</p>
+       <div className="mt-10 text-center max-w-3xl mx-auto px-6">
+
+  {/* ✨ Shayari */}
+  <p className="
+    text-[#2f241b]
+    text-xl md:text-2xl
+    font-medium
+    leading-relaxed tracking-wide
+    italic
+  ">
+    अपनी पीर कही है केवल नूतन गीत कहाँ गाया है।  
+    <br />
+    जब जब मन में टीस उठी है तब तब उसको दोहराया है।।
+  </p>
+
+  {/* 👤 Author */}
+  <span className="
+    block mt-6
+    text-lg md:text-xl
+    font-semibold tracking-wide
+
+    bg-gradient-to-r from-[#8c6a4a] via-[#caa97a] to-[#8c6a4a]
+    bg-clip-text text-transparent
+
+    drop-shadow-[0_2px_10px_rgba(140,100,60,0.3)]
+  ">
+    — सुरेन्द्र दुबे
+  </span>
+
+</div>
       </motion.div>
 
       {/* 📚 BOOKS ROW */}
