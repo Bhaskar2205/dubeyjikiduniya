@@ -77,8 +77,9 @@ export default function Footer() {
               Connect
             </h3>
 
+
             <p className="mt-4 text-sm text-[#cbbca7]">
-              For collaborations & bookings
+              For collaborations & bookings you can contact us via email
             </p>
 
             <p className="mt-2 text-sm">eshandubey@gmail.com</p>
