@@ -4,15 +4,14 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react"; 
 
 
-// sahdhasd
 
 const shows = [
-  { image: "/gallery/image1.jpg" },
-  { image: "/gallery/image2.jpg" },
-  { image: "/gallery/image3.jpg" },
-  { image: "/gallery/image4.jpg" },
-  { image: "/gallery/image5.jpg" },
-  { image: "/gallery/image6.jpg" },
+  { image: "/gallery/image1.png" },
+  { image: "/gallery/image2.png" },
+  { image: "/gallery/image3.png" },
+  { image: "/gallery/image4.png" },
+  { image: "/gallery/image5.png" },
+  { image: "/gallery/image6.png" },
 ];
 
 export default function PerformanceReel() {
