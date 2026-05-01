@@ -3,8 +3,10 @@
 import Hero from "@/components/sections/hero";
 import Navbar from "@/components/layout/navbar";
 import BooksSection from "@/components/sections/books";
-import GlobeSection from "@/components/sections/IndiaMapSection";
+import GlobeSection from "@/components/sections/india-map/IndiaMapSection";
 import PerformanceReel from "@/components/sections/performance-reel";
+import Footer from "@/components/layout/footer";
+
 
 import { motion } from "framer-motion";
 
@@ -31,19 +33,12 @@ export default function Home() {
       <Hero />
 
       {/* 🔥 BOOKS SECTION */}
-      <FadeSection>
         <BooksSection />
-      </FadeSection>
 
-      <FadeSection>
   <GlobeSection />
-</FadeSection>
- <FadeSection> 
 <PerformanceReel />
 
- </FadeSection>
       {/* STORY / PERFORMANCE */}
-      <FadeSection>
         <section className="py-32 flex items-center justify-center bg-[#efe6dc]">
           <div className="text-center px-6 max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-semibold leading-tight">
@@ -51,16 +46,9 @@ export default function Home() {
             </h2>
           </div>
         </section>
-      </FadeSection>
 
-      {/* FINAL SECTION */}
-      <FadeSection>
-        <section className="py-32 flex items-center justify-center">
-          <div className="text-center max-w-xl px-6">
-            {/* intentionally empty */}
-          </div>
-        </section>
-      </FadeSection>
+              <Footer />
+
 
     </main>
   );

@@ -29,8 +29,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full`}
     >
-<body className="min-h-full bg-[#f5efe6] text-[#1a1a1a] antialiased font-serif">
-        {/* Floating Center Navbar */}
+<body className="min-h-screen overflow-x-hidden touch-pan-y bg-[#f5efe6]">        {/* Floating Center Navbar */}
         <Navbar />
 
         {/* Main Content */}
