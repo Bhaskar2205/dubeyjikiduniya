@@ -1,7 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"; 
+
+
+// sahdhasd
 
 const shows = [
   { image: "/gallery/image1.jpg" },
