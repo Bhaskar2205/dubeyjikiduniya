@@ -5,33 +5,33 @@ import Link from "next/link";
 
 const books = [
   {
-    title: "आओ! जिन्दा–जिन्दा खेलें",
+    title: "“आओ! निन्दा–निन्दा खेलें”",
     author: "सुरेन्द्र दुबे",
     image: "/books/book1.jpeg",
   },
   {
-    title: "जा रहा हूँ दूर इतना…",
-    author: "डॉ. कीर्ति काले",
+    title: "“श्रीमद्भगवद्गीता हिन्दी पद्यानुवाद (सम्पूर्ण 18 अध्याय)”",
+    author: "“सुरेन्द्र दुबे”",
     image: "/books/book2.jpeg",
   },
   {
-    title: "बातों–बातों में",
+    title: "“बातों–बातों में”",
     author: "डॉ. कीर्ति काले",
     image: "/books/book3.jpeg",
   },
   {
-    title: "कवन्ध, श्री अवध्या",
-    author: "आर. एम. राणेर",
+    title: "वनवासी अवधेश",
+    author: "“आर. एल. दीपक”",
     image: "/books/book4.jpeg",
   },
   {
-    title: "कमे भरोसे का जमूरा",
-    author: "डॉ. सुरेन्द्र दुबे",
+    title: "“मन कहता है”",
+    author: "“आर. एल. दीपक”",
     image: "/books/book5.jpeg",
   },
   {
-    title: "कुर्सी तू बड़भागिनी",
-    author: "सुरेन्द्र दुबे",
+    title: "“कुर्सी तू बड़भागिनी”",
+    author: "“सुरेन्द्र दुबे”",
     image: "/books/book6.jpeg",
   },
 ];

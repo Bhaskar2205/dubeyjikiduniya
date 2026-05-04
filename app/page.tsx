@@ -6,6 +6,8 @@ import BooksSection from "@/components/sections/books";
 import GlobeSection from "@/components/sections/india-map/IndiaMapSection";
 import PerformanceReel from "@/components/sections/performance-reel";
 import Footer from "@/components/layout/footer";
+import BlogSection from "@/components/BlogSection";
+
 
 
 import { motion } from "framer-motion";
@@ -37,6 +39,8 @@ export default function Home() {
 
   <GlobeSection />
 <PerformanceReel />
+<BlogSection />
+
 
       {/* STORY / PERFORMANCE */}
         <section className="py-32 flex items-center justify-center bg-[#efe6dc]">
