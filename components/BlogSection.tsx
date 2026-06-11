@@ -142,6 +142,172 @@ export default function BlogSection() {
 
       </div>
 
+
+      {/* POETRY UNIVERSE CTA */}
+<motion.section
+  initial={{ opacity: 0, y: 60 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  className="relative mt-24 md:mt-40 px-4"
+>
+  <div
+    className="
+      relative
+      overflow-hidden
+      rounded-[32px] md:rounded-[48px]
+      border border-[#d9c7b0]/40
+      bg-gradient-to-br
+      from-[#faf7f2]
+      via-[#f5efe6]
+      to-[#efe3d3]
+      shadow-[0_25px_80px_rgba(0,0,0,0.08)]
+    "
+  >
+    {/* Luxury Ambient Lights */}
+    <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#caa97a]/20 blur-[120px]" />
+      <div className="absolute bottom-0 right-0 w-[250px] h-[250px] bg-[#8c6a4a]/10 blur-[100px]" />
+      <div className="absolute top-0 left-0 w-[200px] h-[200px] bg-white/30 blur-[80px]" />
+    </div>
+
+    <div className="relative z-10 px-6 md:px-16 py-16 md:py-24">
+
+      {/* Quote Mark */}
+      <div className="text-center">
+        <span className="text-[70px] md:text-[110px] leading-none text-[#caa97a]/40 font-serif">
+          "
+        </span>
+      </div>
+
+      {/* Heading */}
+      <div className="max-w-4xl mx-auto text-center">
+        <h3
+          className="
+            text-3xl
+            sm:text-4xl
+            md:text-6xl
+            font-semibold
+            leading-[1.15]
+            tracking-tight
+            text-[#2f241b]
+          "
+        >
+          कुछ एहसास
+          <span className="block mt-2">
+            पढ़े नहीं जाते...
+          </span>
+
+          <span
+            className="
+              block
+              mt-4
+              bg-gradient-to-r
+              from-[#8c6a4a]
+              via-[#caa97a]
+              to-[#8c6a4a]
+              bg-clip-text
+              text-transparent
+            "
+          >
+            महसूस किए जाते हैं।
+          </span>
+        </h3>
+
+        <p
+          className="
+            mt-8
+            text-base
+            md:text-xl
+            leading-relaxed
+            text-[#5e4c3b]
+            max-w-2xl
+            mx-auto
+          "
+        >
+          अगर मेरी कविताएँ आपके दिल तक पहुँची हैं,
+          तो आइए इस सफर को आगे बढ़ाते हैं।
+          मंच की आवाज़, अनकहे जज़्बात और नई रचनाएँ —
+          सब कुछ YouTube पर आपका इंतज़ार कर रहा है।
+        </p>
+      </div>
+
+      {/* Divider */}
+      <div className="flex justify-center my-10 md:my-14">
+        <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#caa97a] to-transparent" />
+      </div>
+
+      {/* Subscribe Button */}
+      <div className="flex justify-center">
+        <motion.a
+          href="https://www.youtube.com/@Eshandubeypoetry"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{
+            scale: 1.04,
+            y: -2,
+          }}
+          whileTap={{
+            scale: 0.98,
+          }}
+          className="
+            group
+            inline-flex
+            items-center
+            gap-4
+            rounded-full
+            px-6
+            md:px-10
+            py-4
+            md:py-5
+            bg-[#8c6a4a]
+            text-white
+            font-medium
+            shadow-[0_20px_40px_rgba(140,106,74,0.25)]
+            transition-all
+          "
+        >
+          <div
+            className="
+              flex
+              h-10
+              w-10
+              items-center
+              justify-center
+              rounded-full
+              bg-white/15
+              backdrop-blur-md
+              group-hover:rotate-12
+              transition
+            "
+          >
+            ▶
+          </div>
+
+          <span className="text-sm md:text-base">
+            Subscribe on YouTube
+          </span>
+        </motion.a>
+      </div>
+
+      {/* Small Elegant Footer Text */}
+      <p
+        className="
+          text-center
+          mt-8
+          text-xs
+          md:text-sm
+          tracking-[0.25em]
+          uppercase
+          text-[#8c6a4a]
+        "
+      >
+        Poetry • Stories • Live Performances
+      </p>
+
+    </div>
+  </div>
+</motion.section>
+
     </section>
   );
 }
