@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
@@ -29,14 +30,17 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full`}
     >
-<body className="min-h-screen overflow-x-hidden touch-pan-y bg-[#f5efe6]">        {/* Floating Center Navbar */}
+      <body className="min-h-screen overflow-x-hidden touch-pan-y bg-[#f5efe6]">
         <Navbar />
 
         {/* Main Content */}
-        <main className="flex-1">
-          {children}
-        </main>
+        <main className="flex-1">{children}</main>
 
+        <Script
+          src="//code.tidio.co/xiihygyop5kdgsidg6dh7kqgqyxlvcew.js"
+          strategy="afterInteractive"
+          async
+        />
       </body>
     </html>
   );
